@@ -2,6 +2,7 @@ package Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.util.Locale;
@@ -13,6 +14,8 @@ public class GWD_old {
         System.setProperty("user.language","EN");
         if (driver==null) {//ilk kez 1 defa calissin diye
             driver = new ChromeDriver();
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--headless\", \"--no-sandbox\", \"--disable-dev-shm-usage\", \"--disable-gpu\", \"--window-size=1400,2400");
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         }
