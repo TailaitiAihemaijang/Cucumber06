@@ -101,7 +101,7 @@
                     <!--                    </suiteXmlFiles>-->
 
                     <includes>
-                        <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                        <!--  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
                         <include>**/_01_TestRunner.java</include>
                     </includes>
 
